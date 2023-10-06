@@ -1,4 +1,3 @@
-/* eslint-disable */
 import "bootstrap";
 import "./style.css";
 
@@ -40,15 +39,14 @@ window.onload = function() {
   ];
 
   function createExcuse() {
-    let whoRam = who[Math.floor(Math.random() * who.length)];
-    let actionRam = action[Math.floor(Math.random() * action.length)];
-    let whatRam = what[Math.floor(Math.random() * what.length)];
-    let whenRam = when[Math.floor(Math.random() * when.length)];
+    let whoRamdom = who[Math.floor(Math.random() * who.length)];
+    let actionRamdom = action[Math.floor(Math.random() * action.length)];
+    let whatRamdom = what[Math.floor(Math.random() * what.length)];
+    let whenRamdom = when[Math.floor(Math.random() * when.length)];
 
-    return `${whoRam} ${actionRam} ${whatRam} ${whenRam}`;
+    return `${whoRamdom} ${actionRamdom} ${whatRamdom} ${whenRamdom}`;
   }
 
-  console.log(createExcuse());
   const excuseElement = document.getElementById("excuse");
   const generatedExcuse = createExcuse();
   excuseElement.textContent = generatedExcuse;
