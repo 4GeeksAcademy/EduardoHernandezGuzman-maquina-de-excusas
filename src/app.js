@@ -2,20 +2,17 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  let quien = [
-    "Un oso",
-    "Mi primo del pueblo",
+  let who = [
+    "Pennywise",
+    "El Jinete sin Cabeza",
     "Un selenita",
     "Un ser venido de otro planeta",
     "Godzilla",
     "Drácula",
     "Cthulhu"
   ];
-  let accion = [
+  let action = [
     "comió",
     "destruyó",
     "quemó",
@@ -24,7 +21,7 @@ window.onload = function() {
     "escondió",
     "partió"
   ];
-  let que = [
+  let what = [
     "las llaves de mi casa",
     "el tejado del vecino",
     "mi coche nuevo",
@@ -32,7 +29,7 @@ window.onload = function() {
     "los apuntes de HTML",
     "el monopatín de mi hermano pequeño"
   ];
-  let cuando = [
+  let when = [
     "después del almuerzo",
     "justo a tiempo",
     "después del concierto",
@@ -42,19 +39,19 @@ window.onload = function() {
     "durante la proyección de la película"
   ];
 
-  function generarExcusa() {
-    let quienRam = quien[Math.floor(Math.random() * quien.length)];
-    let accionRam = accion[Math.floor(Math.random() * accion.length)];
-    let queRam = que[Math.floor(Math.random() * que.length)];
-    let cuandoRam = cuando[Math.floor(Math.random() * cuando.length)];
+  function createExcuse() {
+    let whoRam = who[Math.floor(Math.random() * who.length)];
+    let actionRam = action[Math.floor(Math.random() * action.length)];
+    let whatRam = what[Math.floor(Math.random() * what.length)];
+    let whenRam = when[Math.floor(Math.random() * when.length)];
 
-    return `${quienRam} ${accionRam} ${queRam} ${cuandoRam}`;
+    return `${whoRam} ${actionRam} ${whatRam} ${whenRam}`;
   }
 
-  console.log(generarExcusa());
-  const elementoExcusa = document.getElementById("excusa");
-  const excusaGenerada = generarExcusa();
-  elementoExcusa.textContent = excusaGenerada;
+  console.log(createExcuse());
+  const excuseElement = document.getElementById("excuse");
+  const generatedExcuse = createExcuse();
+  excuseElement.textContent = generatedExcuse;
 };
 
 function refreshPage() {
